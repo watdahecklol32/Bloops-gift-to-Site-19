@@ -4,7 +4,7 @@ local hook; hook = hookmetamethod(game, "__namecall", newcclosure(function(...: 
 	local args: {any} = {...};
 	local self: Instance = args[1];
 	table.remove(args, 1);
-	if not checkcaller() and not flux_security_code and self and typeof(self) == "Instance" and self.ClassName == "RemoteEvent" the'
+	if not checkcaller() and not flux_security_code and self and typeof(self) == "Instance" and self.ClassName == "RemoteEvent" and getnamecallmethod() == "FireServer" then
 		flux_security_code = args[1];
 	end;
 	return hook(...);
