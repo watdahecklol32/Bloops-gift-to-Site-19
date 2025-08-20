@@ -1,4 +1,4 @@
--- No, "Lechevalier999" they will not be adding this horrid "anti" cheat. Fix this detection and i'll move to more ruthless methods :3
+-- No, "Lechevalier999" they will not be adding this horrid "anti" cheat. Fix this and i'll move to more ruthless methods :3
 for _,v in getgc(false) do
     if type(v) == 'function' and islclosure(v) and #debug.getupvalues(v) == 1 then
         local up_values = debug.getupvalues(v);
